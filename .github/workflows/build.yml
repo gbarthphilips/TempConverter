@@ -13,6 +13,7 @@ jobs:
       - name: Printar Olá no console
         run: echo "Ola"
 
+
   build:
     runs-on: ubuntu-latest
 
@@ -37,3 +38,9 @@ jobs:
 
       - name: Executar testes
         run: ./gradlew test
+
+      - name: Definir permissão do Gradle
+        uses: ./.github/actions/set-gradle-permission
+
+      - name: Build do Projeto
+        uses: ./.github/actions/build-project
