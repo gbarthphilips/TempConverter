@@ -7,6 +7,12 @@ on:
     branches: [ main ]
 
 jobs:
+  diga-ola:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printar Olá no console
+        run: echo "Ola"
+
   build:
     runs-on: ubuntu-latest
 
